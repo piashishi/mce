@@ -1,0 +1,6 @@
+EXPORTS
+	?CreateTestSuiteL@@YAPAVMEUnitTest@@XZ @ 1 NONAME ; class MEUnitTest * __cdecl CreateTestSuiteL(void)
+	?CreateCodecInformationL@CMccCodecInformationFactory@@QAEPAVCMccCodecInformation@@VTFourCC@@@Z @ 2 NONAME ; class CMccCodecInformation * CMccCodecInformationFactory::CreateCodecInformationL(class TFourCC)
+	?NewL@CMccCodecInformationFactory@@SAPAV1@XZ @ 3 NONAME ; class CMccCodecInformationFactory * CMccCodecInformationFactory::NewL(void)
+	?CreateCodecInformationL@CMccCodecInformationFactory@@QAEPAVCMccCodecInformation@@ABVTDesC8@@@Z @ 4 NONAME ; class CMccCodecInformation * CMccCodecInformationFactory::CreateCodecInformationL(class TDesC8 const &)
+

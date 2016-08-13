@@ -1,0 +1,2 @@
+ipappsrv/multimediacommsengine/mmcecli/tsrc/ut_cli/group
+MceClientTest.dll

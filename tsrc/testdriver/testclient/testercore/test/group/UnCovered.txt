@@ -1,0 +1,12 @@
+Source file: e:\testclient\testercore\src\ttcidentifier.cpp
+    3:          *  Name        : TTcIdentifier.cpp
+Source file: e:\testclient\testercore\src\ctcstructure.cpp
+    3:          *  Name        : CTcStructure.cpp
+Source file: e:\testclient\testercore\src\ctcregistry.cpp
+    3:          *  Name        : CTcRegistry.cpp
+Source file: e:\testclient\testercore\src\ctcparameterlist.cpp
+    3:          *  Name        : CTcParameterList.cpp
+Source file: e:\testclient\testercore\src\ctcctrlcodec.cpp
+    3:          *  Name        : CTcCTRLCodec.cpp
+Source file: e:\testclient\testercore\src\ctcarray.cpp
+    3:          *  Name        : CTcArray.cpp

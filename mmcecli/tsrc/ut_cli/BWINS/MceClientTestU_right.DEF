@@ -1,0 +1,4 @@
+EXPORTS
+	?CreateTestL@@YAPAVMTest@@XZ @ 1 NONAME ; class MTest * CreateTestL(void)
+
+

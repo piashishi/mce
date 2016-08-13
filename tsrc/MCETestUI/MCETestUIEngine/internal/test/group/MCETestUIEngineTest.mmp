@@ -1,0 +1,115 @@
+
+// Default cppunit arguments:
+// MCETestUIEngineTest.dll 3 0 FILE html C:/CppUnitResults noleakpanic
+
+#include <platform_paths.hrh>
+
+TARGET 		MCETestUIEngineTest.dll
+TARGETTYPE 	dll
+UID         0x101F5380 0x00000001
+
+// Engine sources
+SOURCEPATH  ../../../src          // /MCETestUI/MCETestUIEngine/src
+SOURCE      CMCETestUIEngine.cpp
+SOURCE      CMCETestUIEngineSipObserver.cpp
+SOURCE      CMCETestUIEngineProfileContainer.cpp
+SOURCE      CMCETestUIEngineAudioStream.cpp
+SOURCE      CMCETestUIEngineInSession.cpp
+SOURCE      CMCETestUIEngineMultimediaObserver.cpp
+SOURCE      CMCETestUIEngineOutSession.cpp
+SOURCE      CMCETestUIEngineProfile.cpp
+SOURCE      CMCETestUIEngineSession.cpp
+SOURCE      CMCETestUIQuestionBase.cpp
+SOURCE      CMCETestUIQuestionDataQuery.cpp
+SOURCE      CMCETestUIQuestionSingleSelection.cpp
+SOURCE      MCETestUIEngineDefaultValues.cpp
+SOURCE      TMCETestUIEngineCmdAcceptSession.cpp
+SOURCE      TMCETestUIEngineCmdAnswerSession.cpp
+SOURCE      TMCETestUIEngineCmdBase.cpp
+SOURCE      TMCETestUIEngineCmdCreateSession.cpp
+SOURCE      TMCETestUIEngineCmdDeleteSession.cpp
+SOURCE      TMCETestUIEngineCmdDisableStream.cpp
+SOURCE      TMCETestUIEngineCmdEnableStream.cpp
+SOURCE      TMCETestUIEngineCmdEstablish.cpp
+SOURCE      TMCETestUIEngineCmdRejectSession.cpp
+SOURCE      TMCETestUIEngineCmdRegister.cpp
+SOURCE      TMCETestUIEngineCmdSelectProfile.cpp
+SOURCE      TMCETestUIEngineCmdUnregister.cpp
+SOURCE      TMCETestUIEngineCmdTerminateSession.cpp
+SOURCE      TMCETestUIEngineCmdUpdateSession.cpp
+SOURCE      TMCETestUIEngineCmdCreatePoCSession.cpp
+SOURCE      TMCETestUIEngineCmdCreateVoIPSession.cpp
+SOURCE      TMCETestUIEngineCmdCreate2WayVideoSession.cpp
+SOURCE      CMCETestUIEngineCodec.cpp
+SOURCE	    CMCETestUIEngineSink.cpp
+SOURCE      CMCETestUIEngineSource.cpp
+SOURCE      TMCETestUIEngineCmdEnableAudioSource.cpp
+SOURCE	    TMCETestUIEngineCmdDisableAudioSource.cpp
+SOURCE      TMCETestUIEngineCmdEnableAudioSink.cpp
+SOURCE      TMCETestUIEngineCmdDisableAudioSink.cpp
+SOURCE	    TMCETestUIEngineCmdRingingSession.cpp
+SOURCE	    TMCETestUIEngineCmdCancelSession.cpp
+SOURCE	    TMCETestUIEngineCmdDeleteAudioCodec.cpp
+SOURCE      CMCETestUIEngineEvent.cpp 
+SOURCE      CMCETestUIEngineOutEvent.cpp 
+SOURCE      CMCETestUIEngineInEvent.cpp 
+SOURCE      TMCETestUIEngineCmdCreateEvent.cpp
+SOURCE      TMCETestUIEngineCmdSubscribeEvent.cpp
+SOURCE      TMCETestUIEngineCmdTerminateEvent.cpp
+SOURCE      TMCETestUIEngineCmdDeleteEvent.cpp
+SOURCE      TMCETestUIEngineCmdAcceptEvent.cpp
+SOURCE      TMCETestUIEngineCmdRejectEvent.cpp
+SOURCE      TMCETestUIEngineCmdNotifyEvent.cpp
+SOURCE      TMCETestUIEngineCmdUpdateEvent.cpp
+SOURCE      CMCETestUIEngineRefer.cpp 
+SOURCE      CMCETestUIEngineOutRefer.cpp 
+SOURCE      CMCETestUIEngineInRefer.cpp 
+SOURCE 	    TMCETestUIEngineFloorControlSession.cpp
+SOURCE      TMCETestUIEngineCmdWriteSdpToFile.cpp
+SOURCE      TMCETestUIEngineCmdCreateMceSettings.cpp
+SOURCE      CMCETestUIEngineVideoStream.cpp
+SOURCE      CMCETestUIEngineVideoCodec.cpp
+SOURCE	    CMCETestUIEngineVideoSink.cpp
+SOURCE      CMCETestUIEngineVideoSource.cpp
+SOURCE      CMCEPoCOmaCsCallWatcher.cpp
+SOURCE      TMCETestUIEngineCmdCreateMceValueSettings.cpp
+SOURCE	    TMCETestUIEngineCmdCryptoHandling.cpp
+SOURCE      TMCETestUIEngineCmdDisplayProfileUser.cpp
+SOURCE      TMCETestUIEngineCmdRemoveStream.cpp
+SOURCE      TMCETestUIEngineCmdSRReqRes.cpp
+
+// Test sources
+SOURCEPATH   ../src              // /MCETestUI/MCETestUIEngine/internal/test/src
+SOURCE       DllEntry.cpp
+SOURCE		 CMCETestUIEngineTest.cpp
+
+USERINCLUDE  ../inc              // /MCETestUI/MCETestUIEngine/internal/test/inc
+USERINCLUDE  ../../../inc        // /MCETestUI/MCETestUIEngine/inc
+
+// CppUnit header files. Needed since cppunit headers include other cppunit
+// headers using #include ""
+USERINCLUDE  /epoc32/include/cppunit
+
+MW_LAYER_SYSTEMINCLUDE 
+
+LIBRARY     euser.lib
+LIBRARY		mceclient.lib
+LIBRARY		sipclient.lib
+LIBRARY     sipprofilecli.lib
+LIBRARY     esock.lib
+LIBRARY     commdb.lib
+LIBRARY     sipcodec.lib
+LIBRARY     bafl.lib
+LIBRARY     inetprotutil.lib
+LIBRARY     charconv.lib
+LIBRARY     avkon.lib
+LIBRARY     efsrv.lib 
+
+// CppUnit library to link to
+LIBRARY     cppunitframework.lib
+
+VENDORID VID_DEFAULT
+
+CAPABILITY  ALL -TCB
+
+EXPORTUNFROZEN

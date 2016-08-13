@@ -1,0 +1,118 @@
+/*
+* Copyright (c) 2002-2005 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:    CPP UNIT test cases
+*
+*/
+
+
+
+#include <platform_paths.hrh>
+
+#if (defined EKA2)
+//CAPABILITY 	CAP_GENERAL_DLL
+//VENDORID	    VID_DEFAULT
+#endif
+
+
+TARGET          MceCommonTest.dll
+TARGETTYPE      DLL
+//UID             0x1000008D 0x1020286C
+UID             0x101F5380 0x101F95FF
+
+MACRO           MCE_UNIT_TEST
+
+
+SOURCEPATH      ../../../src
+SOURCE          mcecomsession.cpp
+SOURCE          mcecomendpoint.cpp
+SOURCE          mcecomstreambundle.cpp
+SOURCE          mcecommediastream.cpp
+SOURCE          mcecomaudiostream.cpp
+SOURCE          mcecomvideostream.cpp
+SOURCE          mcecomcamerasource.cpp
+SOURCE          mcecommediasink.cpp
+SOURCE          mcecomrtpsink.cpp
+SOURCE          mcecomspeakersink.cpp
+SOURCE          mcecomavsink.cpp
+SOURCE          mcecommediasource.cpp
+SOURCE          mcecommicsource.cpp
+SOURCE          mcecomrtpsource.cpp
+SOURCE          mcecomcodec.cpp
+SOURCE          mcecomaudiocodec.cpp
+SOURCE          mcecomamrcodec.cpp
+SOURCE          mcecomamrwbcodec.cpp
+SOURCE          mcecomg711codec.cpp
+SOURCE          mcecomg729codec.cpp
+SOURCE          mcecomilbccodec.cpp
+SOURCE          mcecomdtmfcodec.cpp
+SOURCE          mcecomredcodec.cpp
+SOURCE          mcecomcncodec.cpp
+SOURCE          mcecomvideocodec.cpp
+SOURCE          mcecomh263codec.cpp
+SOURCE          mcecomavccodec.cpp
+SOURCE          mcecomdisplaysink.cpp
+SOURCE          mcecomfilesource.cpp
+SOURCE          mcecomfilesink.cpp
+SOURCE          mcecomfactory.cpp
+SOURCE          mceserial.cpp
+SOURCE          mceevents.cpp
+SOURCE          mcecomserializationcontext.cpp
+
+
+
+SOURCEPATH      ../src
+SOURCE          CMCEComSessionTest.cpp
+SOURCE          CMCEComAudioStreamTest.cpp
+SOURCE          DllEntry.cpp
+
+
+
+USERINCLUDE     ../inc
+USERINCLUDE     ../../../inc
+USERINCLUDE     ../../../../mmcecli/inc
+USERINCLUDE   	/Symbian_CppUnit_V3.3/Include
+
+SYSTEMINCLUDE   /epoc32/include/cppunit
+MW_LAYER_SYSTEMINCLUDE
+
+
+LIBRARY         euser.lib
+LIBRARY         estor.lib 
+LIBRARY         bafl.lib 
+LIBRARY         apparc.lib
+LIBRARY         apgrfx.lib
+LIBRARY	        cppunitframework.lib
+LIBRARY     	insock.lib
+LIBRARY     	esock.lib	
+
+
+START WINS      
+//?wins_specific_information
+END
+
+START MARM
+//?marm_specific_information
+END
+
+//#if !defined(EKA2)
+//EXPORTUNFROZEN
+//#endif
+
+VENDORID VID_DEFAULT
+
+CAPABILITY LocalServices ReadUserData WriteUserData UserEnvironment \
+NetworkServices Location MultimediaDD ReadDeviceData WriteDeviceData \
+PowerMgmt TrustedUI ProtServ NetworkControl SwEvent DRM \
+SurroundingsDD CommDD DiskAdmin AllFiles
+

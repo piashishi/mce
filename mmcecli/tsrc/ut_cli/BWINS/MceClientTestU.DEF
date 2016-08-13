@@ -1,0 +1,4 @@
+EXPORTS
+	?CreateTestL@@YAPAVMEUnitTest@@XZ @ 1 NONAME ; class MEUnitTest * CreateTestL(void)
+
+

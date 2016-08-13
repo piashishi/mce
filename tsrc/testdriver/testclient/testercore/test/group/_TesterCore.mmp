@@ -1,0 +1,42 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+
+TARGET        _TesterCore.dll
+TARGETTYPE    dll
+UID           0x101F5380 0x00000001
+
+SOURCEPATH        ../src
+SOURCE            dllMain.cpp CTstNameValue.cpp
+SOURCE            CTstStructure.cpp CTstArray.cpp CTstParameterlist.cpp
+SOURCE            CTstRegistry.cpp CTstCtrlCodec.cpp 
+
+USERINCLUDE       ../../inc ../../../commonsrc ../src
+
+// CppUnit header files. Needed since cppunit headers include other cppunit
+// headers using #include ""
+USERINCLUDE       /epoc32/include/cppunit
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY       euser.lib bafl.lib
+LIBRARY       cppunitframework.lib testercore.lib
+
+CAPABILITY LocalServices ReadUserData WriteUserData UserEnvironment NetworkServices \
+	Location MultimediaDD ReadDeviceData WriteDeviceData PowerMgmt TrustedUI ProtServ \
+	NetworkControl SwEvent SurroundingsDD CommDD DiskAdmin AllFiles
+
+EXPORTUNFROZEN

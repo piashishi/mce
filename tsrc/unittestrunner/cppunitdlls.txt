@@ -1,0 +1,4 @@
+multimediacommsengine/mceapi/internal/test/group
+MceClientTest.dll
+multimediacommsengine/common/internal/test/group
+MceCommonTest.dll
